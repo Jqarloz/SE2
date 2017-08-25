@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  </script>
+</head>
+<style type="text/css">
+	body { padding: 25px; }
+.link { background-color: #369; padding: 6px; font-size: 13px; width: 100%; margin: 0; }
+.link, .link a { color: #fff; }
+.menu { margin: 0 0 25px; padding: 35px 0 0; text-align: center; }
+.menu li { display: inline-block; }
+.menu li a { padding: 3px 6px; background-color: #222; color: #eee; text-decoration: none; }
+h2 { background-color: #eee; padding: 3px 10px; position: relative; }
+.gototop { font-size: 11px; position: absolute; top: 10px; right: 10px; color: #777; }
+</style>
+<body>
+
+<a id="top"></a>
+
+<p class="link">Ver artículo: <a href="http://www.danielnabil.com/blog/enlaces-internos-animacion-jquery-wordpress/">Cómo animar enlaces internos con jQuery (con y sin WordPress)</a></p>
+
+<ul class="menu">
+    <li><a href="#a">A</a></li>
+    <li><a href="#b">B</a></li>
+    <li><a href="#c">C</a></li>
+    <li><a href="#d">D</a></li>
+    <li><a href="#e">E</a></li>
+</ul>
+
+<h1>Animación de enlaces internos con jQuery</h1>
+
+	<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse a eleifend tellus. Vestibulum id dui ut purus posuere rhoncus vehicula in massa. Etiam in vulputate quam. Integer fringilla consequat purus, sit amet laoreet eros ullamcorper eu. </p>
+
+	<p>Proin elementum augue sit amet purus tempor quis vehicula metus condimentum. Nunc eu urna adipiscing purus tincidunt pharetra. Duis iaculis enim eu sapien vulputate pellentesque. Suspendisse vitae lorem ac est vehicula auctor ut eu metus. </p>
+
+	<p>Nulla velit diam, tempor ac pulvinar non, posuere ac eros. Nullam in enim sit amet ante volutpat ullamcorper. Etiam eu sapien at sem varius mollis pellentesque non metus. Morbi ante quam, eleifend tincidunt commodo sed, fringilla id enim. </p>
+
+	<h2 id="a">A</h2>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<h2 id="b">B</h2>
+	
+	<p>Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<p>Suspendisse sed est nec metus viverra ultrices. Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. </p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse a eleifend tellus. Vestibulum id dui ut purus posuere rhoncus vehicula in massa. Etiam in vulputate quam. Integer fringilla consequat purus, sit amet laoreet eros ullamcorper eu. </p>
+
+	<p>Proin elementum augue sit amet purus tempor quis vehicula metus condimentum. Nunc eu urna adipiscing purus tincidunt pharetra. Duis iaculis enim eu sapien vulputate pellentesque. Suspendisse vitae lorem ac est vehicula auctor ut eu metus. </p>
+
+	<p>Nulla velit diam, tempor ac pulvinar non, posuere ac eros. Nullam in enim sit amet ante volutpat ullamcorper. Etiam eu sapien at sem varius mollis pellentesque non metus. Morbi ante quam, eleifend tincidunt commodo sed, fringilla id enim. </p>
+
+	<h2 id="c">C</h2>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<h3>Titulo h3</h3>
+	
+	<p>Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<p>Suspendisse sed est nec metus viverra ultrices. Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. </p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse a eleifend tellus. Vestibulum id dui ut purus posuere rhoncus vehicula in massa. Etiam in vulputate quam. Integer fringilla consequat purus, sit amet laoreet eros ullamcorper eu. </p>
+
+	<p>Proin elementum augue sit amet purus tempor quis vehicula metus condimentum. Nunc eu urna adipiscing purus tincidunt pharetra. Duis iaculis enim eu sapien vulputate pellentesque. Suspendisse vitae lorem ac est vehicula auctor ut eu metus. </p>
+
+	<p>Nulla velit diam, tempor ac pulvinar non, posuere ac eros. Nullam in enim sit amet ante volutpat ullamcorper. Etiam eu sapien at sem varius mollis pellentesque non metus. Morbi ante quam, eleifend tincidunt commodo sed, fringilla id enim. </p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<p>Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<p>Suspendisse sed est nec metus viverra ultrices. Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. </p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<h2 id="d">D</h2>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+
+	<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse a eleifend tellus. Vestibulum id dui ut purus posuere rhoncus vehicula in massa. Etiam in vulputate quam. Integer fringilla consequat purus, sit amet laoreet eros ullamcorper eu. </p>
+
+	<p>Proin elementum augue sit amet purus tempor quis vehicula metus condimentum. Nunc eu urna adipiscing purus tincidunt pharetra. Duis iaculis enim eu sapien vulputate pellentesque. Suspendisse vitae lorem ac est vehicula auctor ut eu metus. </p>
+
+	<p>Nulla velit diam, tempor ac pulvinar non, posuere ac eros. Nullam in enim sit amet ante volutpat ullamcorper. Etiam eu sapien at sem varius mollis pellentesque non metus. Morbi ante quam, eleifend tincidunt commodo sed, fringilla id enim. </p>
+
+	<h2 id="e">E</h2>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ultrices lorem. Integer ultrices rhoncus odio, eu adipiscing orci blandit vitae. Ut malesuada bibendum leo, ut auctor purus fringilla sit amet. Suspendisse sed est nec metus viverra ultrices. </p>
+
+	<p>Aenean vehicula, nisi ac aliquam tristique, purus orci scelerisque erat, nec vehicula quam est non arcu. Phasellus placerat tempus lacus, nec semper ipsum volutpat vitae. Nulla facilisi. Ut ornare porta commodo. Cras nulla quam, lacinia gravida euismod non, tempus in orci. Quisque mattis nunc a augue semper id vehicula urna varius.</p>
+</body>
+</html>

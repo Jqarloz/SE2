@@ -1,0 +1,28 @@
+#intro{
+	height: 100vh;
+	background: radial-gradient(circle, #E0E4CC 0%, #009688 100%);
+	text-align: center;
+	color: #263238;
+}
+
+img#logo{
+	margin-top: 50px;
+}
+
+#project.fade-in{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.project{
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all 1s ease-out;
+}
+img#img{
+	margin-top: -100px 
+}
+#intro2{
+	height: 100vh;
+	text-align: center;
+}

@@ -1,0 +1,108 @@
+body{
+	background-image: url(imagenes/fondo.png);
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+	margin: 0;
+}
+
+img{
+	max-width: 600px;
+}
+
+/*clase centrar imagen principal*/
+.quitar-float{
+	float: none;
+}
+
+/*clase que pone el espacio arriba de este modo la imagen no queda pegada al margen*/
+.espacio-arriba{
+	margin-top: 50px;
+}
+
+/*Esta clase funciona para darle estilo al nombre de la cafeteria*/
+.pacifico{
+	font-family: 'Pacifico', cursive;	
+}
+.Notice-Text{
+	font-family: 'Noticia Text', serif;
+}
+
+/*Tamaño al nombre de la cafeteria*/
+.grande{
+	font-size: 3em;
+}
+
+.color-letra{
+	color: #080606;
+}
+
+/*espaciado entre links*/
+.espacio-derecha{
+	margin-right: 1em;
+}
+/*color de los links*/
+a,.azul{
+	color: #080606;
+}
+
+/*quita las viñetas en la lista de la pag. menu*/
+.no-lista li{
+	list-style-type: none;
+}
+
+.no-lista{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*pone color a la lista de elementos ubicados en la parte de arriba*/
+.se-gris{
+	background-color: #eee;
+}
+
+.padding-largo{
+	padding: 5px 10px;
+}
+
+/*centra los elementos de la lista de navegacion*/
+.inline-block{
+	float: none;
+	display: inline-block;
+	margin-right: -4px;
+}
+
+/*Coloca la imagen a la altura de las imagenes pequeñas*/
+.vete-arriba{
+	vertical-align: top;
+}
+
+.mediano{
+	font-size: 1.5em;
+}
+
+.retraso-1{
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-animation-delay: 2s: 
+}
+
+.retraso-2{
+	-webkit-animation-delay: 4s;
+	-moz-animation-delay: 4s;
+	-animation-delay: 4s: 
+
+}
+
+.retraso-3{
+	-webkit-animation-delay: 5s;
+	-moz-animation-delay: 5s;
+	-animation-delay: 5s: 
+
+}
+
+.retraso-4{
+	-webkit-animation-delay: 6s;
+	-moz-animation-delay: 6s;
+	-animation-delay: 6s: 
+
+}

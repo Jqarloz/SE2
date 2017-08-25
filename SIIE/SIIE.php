@@ -1,0 +1,327 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sistema de Información Integral Estadístico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Icons -->
+    <link href="scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />  
+    <link href="scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+        <link href="scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="scripts/icons/social/stylesheets/social_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" href="scripts/fontawesome/css/font-awesome.min.css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="scripts/fontawesome/css/font-awesome-ie7.min.css">
+    <![endif]-->
+
+
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Palatino+Linotype" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+    <link href="styles/custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="pageBody">
+
+<div id="decorative2">
+    <div class="container">
+
+        <div class="divPanel topArea notop nobottom">
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <div id="divLogo" class="pull-left">
+                        <img src="images/SIIE.PNG" class="img-circle" alt="" />
+                        <a href="index.html" id="divTagLine">Universidad Politécnica de Tlaxcala</a>
+                    </div>
+
+                    <div id="divMenuRight" class="pull-right">
+                    <div class="navbar">
+                        <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+                            Menu <span class="icon-chevron-down icon-white"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav nav-pills ddmenu">
+                                <li class="dropdown active"><a href="index.html">Inicio</a></li>
+                                <li class="dropdown"><a href="SIIE.php">Reportes</a></li>
+
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="decorative1" style="position:relative">
+    <div class="container">
+
+        <div class="divPanel headerArea">
+            <div class="row-fluid">
+                <div class="span12">
+
+                        <div id="headerSeparator"></div>
+
+                        <div id="divHeaderText" class="page-content">
+                            <div id="divHeaderLine1">SIIE</div><br />
+                            <div id="divHeaderLine2">Sistema de Información Integral Estadístico</div><br />
+                           
+                        </div>
+
+                        <div id="headerSeparator2"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="contentOuterSeparator"></div>
+
+<div class="container">
+
+    <div class="divPanel page-content">
+
+        <div class="breadcrumbs">
+                <a href="index.html">Inicio</a> &nbsp;/&nbsp; <span>Reportes</span>
+            </div> 
+
+        <div class="row-fluid">
+                <div class="span8">
+
+                    <h1>Reportes</h1>
+
+            
+            <br />
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab">Materias</a></li>
+                <li><a href="#profile" data-toggle="tab">Reprobados</a></li>
+                <li><a href="#settings" data-toggle="tab">....</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                      <h3>Imprimir reporte en formato</h3>
+      <p>
+      <a href="Reportedealumnos.xlsx">Descargar en Formato Excel <img width='76px'src="excel.png" alt="..." class="img-thumbnail img-responsive"></a> 
+<?php
+include("cc.php");
+$Consultar=mysql_query("select DISTINCT resultado.idmateria,resultado.calificacion,materiaplan.cuatrimestre,alumno.nocuenta 
+as matricula  from  resultado  inner join alumno on alumno.nocuenta=resultado.nocuenta inner join materiaplan   
+on materiaplan.idmateria=resultado.idmateria  where alumno.nocuenta=1331107449 and resultado.calificacion>=70 
+and promediable>0 order by materiaplan.cuatrimestre");
+if (!$Consultar) {
+    echo 'No se pudo ejecutar la consulta: ' . mysql_error();
+    exit;
+}
+header("Pragma: public");
+header("Expires: 0");
+$filename = "Reporte1.xls";
+header("Content-type: application/x-msdownload");
+header("Content-Disposition: attachment; filename=$filename");
+header("Pragma: no-cache");
+header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+echo '<table class="table table-striped table-bordered table-hover" id="dataTables-example">';
+echo '<tr><th>idmateria</th>';
+echo '<th>calificacion</th>';
+echo '<th>cuatrimestre</th>';
+
+while ($Guardar=mysql_fetch_array($Consultar))
+{
+  echo '<tr><td>';
+  echo $Guardar['idmateria'];
+  echo '</td><td>';
+  echo $Guardar['calificacion'];
+  echo '</td><td>';
+  echo $Guardar['cuatrimestre'];
+  echo '</td></tr>';
+}
+echo '</table>';
+?>
+                </div>
+                <div class="tab-pane fade" id="profile">
+                    <h3>Imprimir reporte en formato</h3>
+      <p>
+      <a href="A1.1.php">Descargar en Formato Excel <img width='76px'src="excel.png" alt="..." class="img-thumbnail img-responsive"></a> 
+<?php
+include("cc.php");
+$Consultar=mysql_query("select resultado.idgrupo as IDGRUPO,persona.nombre,persona.apellidopat,persona.apellidomat,materia.nombre from resultado 
+
+inner join grupo on grupo.idgrupo=resultado.idgrupo
+
+inner join persona on persona.idpersonas=resultado.idprofesor
+
+inner join materia on materia.idmateria=resultado.idmateria
+
+inner join plan_estudios on plan_estudios.idplan_estudios=grupo.idplan_estudios
+
+inner join curso on curso.idcurso=plan_estudios.idcurso
+
+where grupo.idperiodo=161 group by resultado.idgrupo");
+if (!$Consultar) {
+    echo 'No se pudo ejecutar la consulta: ' . mysql_error();
+    exit;
+}
+echo '<table class="table table-striped table-bordered table-hover" id="dataTables-example">';
+echo '<tr><th>idGrupo</th>';
+echo '<th>Nombre</th>';
+echo '<th>AP</th>';
+echo '<th>AM</th>';
+echo '<th>Materia</th>';
+
+while ($Guardar=mysql_fetch_array($Consultar))
+{
+  echo '<tr><td>';
+  echo $Guardar['IDGRUPO'];
+  echo '</td><td>';
+  echo $Guardar['nombre'];
+  echo '</td><td>';
+  echo $Guardar['apellidopat'];
+  echo '</td><td>';
+  echo $Guardar['apellidomat'];
+  echo '</td><td>';
+  echo $Guardar['nombre'];
+  echo '</td></tr>';
+}
+echo '</table>';
+?>
+
+                </div>
+                <div class="tab-pane fade" id="settings">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="tab-pane fade" id="otro">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="tab-pane fade" id="ka">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+            <br />
+
+                <br />
+
+      
+                </div>
+                <div class="span4">
+
+
+                    <h2>SIIE</h2>
+
+                    <br />
+
+	                    <p><img src="images/SIIE.gif" class="img-polaroid3" /> </p>
+	                    <small>Sistema de Información Integral Estadístico</small>
+
+
+                    <br />
+
+                  
+
+                  
+
+
+                </div>
+            </div>
+
+        <div id="footerInnerSeparator"></div>
+    </div>
+
+</div>
+
+<div id="footerOuterSeparator"></div>
+
+<div id="divFooter" class="footerArea">
+
+    <div class="container">
+
+        <div class="divPanel">
+
+            <div class="row-fluid">
+                <div class="span3" id="footerArea1">
+                
+                    <h3>Acerca de..</h3>
+
+                    <p></p>
+                    
+                  
+
+                </div>
+
+              
+                <div class="span3" id="footerArea4">
+
+                    <h3>Contacto</h3>  
+                                                               
+                    <ul id="contact-info">
+                    <li>                                    
+                        <i class="general foundicon-phone icon"></i>
+                        <span class="field">Teléfono:</span>
+                        <br />
+                        (0046)246 456 1300                                                                     
+                    </li>
+                   
+                    <li>
+                        <i class="general foundicon-home icon" style="margin-bottom:50px"></i>
+                        <span class="field">Dirección:</span>
+                        <br />
+                        A. Universidad Politécnica de Tlaxcala No.1<br />
+                        San Pedo Xalcaltzinco Tepeyanco,Tlax.<br />
+                    </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <br /><br />
+            <div class="row-fluid">
+                <div class="span12">
+                    <p class="copyright">
+                        Copyright © 2017 Universidad Politécnica de Tlaxcala.
+                    </p>
+
+                    <p class="social_bookmarks">
+                        <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
+			<a href=""><i class="social foundicon-twitter"></i> Twitter</a>
+                    </p>
+                </div>
+            </div>
+            <br />
+
+        </div>
+
+    </div>
+    
+</div>
+
+<script src="scripts/jquery.min.js" type="text/javascript"></script> 
+<script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="scripts/default.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">$('.ttip').tooltip();</script>
+
+
+
+</body>
+</html>

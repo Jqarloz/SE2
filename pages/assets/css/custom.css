@@ -1,0 +1,683 @@
+.carrusel-cuerpo .sl-slider-wrapper
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 300px;
+}
+
+.sl-slide-inner h2,
+.sl-slide-inner blockquote
+{
+    z-index: 50;
+
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.carrusel-cuerpo .sl-slider h2,
+.carrusel-cuerpo .sl-slider blockquote
+{
+    position: relative;
+    z-index: 100;
+
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0 10px 0;
+
+    text-align: center;
+
+    color: #fff;
+    border-left: none;
+}
+
+.carrusel-cuerpo .sl-slider h2
+{
+    font-size: 55px;
+
+    text-shadow: 0 -2px 0 rgba(0, 0, 0, .5);
+}
+
+.carrusel-cuerpo .sl-slider blockquote p
+{
+    font-size: 24px;
+    font-weight: 500;
+
+    padding-top: 0;
+
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+}
+
+.carrusel-cuerpo .sl-slider blockquote cite
+{
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+
+    display: inline-block;
+
+    padding-top: 30px;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.carrusel-cuerpo .bg-img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+    background-position: center center;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+}
+
+
+/* Custom navigation arrows */
+
+.nav-arrows span
+{
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+
+    width: 40px;
+    height: 40px;
+    margin-top: -40px;
+
+    cursor: pointer;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    text-indent: -90000px;
+
+    border: 8px solid #ddd;
+    border: 8px solid rgba(255, 255, 255, .4);
+}
+
+.nav-arrows span:hover
+{
+    border-color: #fff;
+}
+
+.nav-arrows span.nav-arrow-prev
+{
+    left: 5%;
+
+    border-top: none;
+    border-right: none;
+}
+
+.nav-arrows span.nav-arrow-next
+{
+    right: 5%;
+
+    border-bottom: none;
+    border-left: none;
+}
+
+
+/* Custom navigation dots */
+
+.nav-dots
+{
+    position: absolute;
+    z-index: 9;
+    bottom: 2%;
+    left: 0;
+
+    width: 100%;
+    height: 30px;
+
+    text-align: center;
+}
+
+.nav-dots span
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+    margin: 3px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+    background: #fff;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, .9), inset 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.carrusel-cuerpo .nav-dots span
+{
+    margin: 6px;
+
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+
+    background: rgba(150, 150, 150, .1);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, .9), inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 0 2px rgba(255, 255, 255, .8);
+}
+
+.carrusel-cuerpo .nav-dots span.nav-dot-current,
+.carrusel-cuerpo .nav-dots span:hover
+{
+    box-shadow: 0 1px 1px rgba(255, 255, 255, .9), inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 0 5px rgba(255, 255, 255, .5);
+}
+
+.nav-dots span.nav-dot-current:after
+{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+
+    width: 10px;
+    height: 10px;
+
+    content: '';
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .8);
+}
+
+
+/* Content elements */
+
+.carrusel-cuerpo .bg-img-1
+{
+    background-image: url(../images/ventanilla.png);
+    /*background-image: url(../images/unidad_posgrado.jpg);*/
+}
+
+.carrusel-cuerpo .bg-img-2
+{
+    background-image: url(../images/upt.jpg);
+}
+
+.carrusel-cuerpo .bg-img-3
+{
+    background-image: url(../images/pasillo.JPG);
+}
+
+
+
+/* Animations for content elements */
+
+.sl-trans-elems .deco
+{
+    -webkit-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
+       -moz-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
+        -ms-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
+         -o-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
+            animation: roll 1s ease-out both, fadeIn 1s ease-out both;
+}
+
+.sl-trans-elems h2
+{
+    -webkit-animation: moveUp 1s ease-in-out both;
+       -moz-animation: moveUp 1s ease-in-out both;
+        -ms-animation: moveUp 1s ease-in-out both;
+         -o-animation: moveUp 1s ease-in-out both;
+            animation: moveUp 1s ease-in-out both;
+}
+
+.sl-trans-elems blockquote
+{
+    -webkit-animation: fadeIn .5s linear .5s both;
+       -moz-animation: fadeIn .5s linear .5s both;
+        -ms-animation: fadeIn .5s linear .5s both;
+         -o-animation: fadeIn .5s linear .5s both;
+            animation: fadeIn .5s linear .5s both;
+}
+
+.sl-trans-back-elems .deco
+{
+    -webkit-animation: scaleDown 1s ease-in-out both;
+       -moz-animation: scaleDown 1s ease-in-out both;
+        -ms-animation: scaleDown 1s ease-in-out both;
+         -o-animation: scaleDown 1s ease-in-out both;
+            animation: scaleDown 1s ease-in-out both;
+}
+
+.sl-trans-back-elems h2
+{
+    -webkit-animation: fadeOut 1s ease-in-out both;
+       -moz-animation: fadeOut 1s ease-in-out both;
+        -ms-animation: fadeOut 1s ease-in-out both;
+         -o-animation: fadeOut 1s ease-in-out both;
+            animation: fadeOut 1s ease-in-out both;
+}
+
+.sl-trans-back-elems blockquote
+{
+    -webkit-animation: fadeOut 1s linear both;
+       -moz-animation: fadeOut 1s linear both;
+        -ms-animation: fadeOut 1s linear both;
+         -o-animation: fadeOut 1s linear both;
+            animation: fadeOut 1s linear both;
+}
+
+@-webkit-keyframes roll
+{
+    0%
+    {
+        -webkit-transform: translateX(500px) rotate(360deg);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0px) rotate(0deg);
+    }
+}
+
+@-moz-keyframes roll
+{
+    0%
+    {
+        -moz-transform: translateX(500px) rotate(360deg);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -moz-transform: translateX(0px) rotate(0deg);
+
+        opacity: 1;
+    }
+}
+
+@-o-keyframes roll
+{
+    0%
+    {
+        -o-transform: translateX(500px) rotate(360deg);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -o-transform: translateX(0px) rotate(0deg);
+
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes roll
+{
+    0%
+    {
+        -ms-transform: translateX(500px) rotate(360deg);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -ms-transform: translateX(0px) rotate(0deg);
+
+        opacity: 1;
+    }
+}
+
+@keyframes roll
+{
+    0%
+    {
+        transform: translateX(500px) rotate(360deg);
+
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px) rotate(0deg);
+
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes moveUp
+{
+    0%
+    {
+        -webkit-transform: translateY(40px);
+    }
+    100%
+    {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@-moz-keyframes moveUp
+{
+    0%
+    {
+        -moz-transform: translateY(40px);
+    }
+    100%
+    {
+        -moz-transform: translateY(0px);
+    }
+}
+
+@-o-keyframes moveUp
+{
+    0%
+    {
+        -o-transform: translateY(40px);
+    }
+    100%
+    {
+        -o-transform: translateY(0px);
+    }
+}
+
+@-ms-keyframes moveUp
+{
+    0%
+    {
+        -ms-transform: translateY(40px);
+    }
+    100%
+    {
+        -ms-transform: translateY(0px);
+    }
+}
+
+@keyframes moveUp
+{
+    0%
+    {
+        transform: translateY(40px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes scaleDown
+{
+    0%
+    {
+        -webkit-transform: scale(1);
+    }
+    100%
+    {
+        -webkit-transform: scale(.5);
+    }
+}
+
+@-moz-keyframes scaleDown
+{
+    0%
+    {
+        -moz-transform: scale(1);
+    }
+    100%
+    {
+        -moz-transform: scale(.5);
+    }
+}
+
+@-o-keyframes scaleDown
+{
+    0%
+    {
+        -o-transform: scale(1);
+    }
+    100%
+    {
+        -o-transform: scale(.5);
+    }
+}
+
+@-ms-keyframes scaleDown
+{
+    0%
+    {
+        -ms-transform: scale(1);
+    }
+    100%
+    {
+        -ms-transform: scale(.5);
+    }
+}
+
+@keyframes scaleDown
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    100%
+    {
+        transform: scale(.5);
+    }
+}
+
+@-webkit-keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+
+/* Media Queries for custom slider */
+
+@media screen and (max-width: 660px)
+{
+    .carrusel-cuerpo .sl-slider-wrapper
+    {
+        height: 300px;
+    }
+    .carrusel-cuerpo .sl-slider h2
+    {
+        font-size: 36px;
+    }
+    .carrusel-cuerpo .sl-slider blockquote p
+    {
+        font-size: 14px;
+    }
+}
+
+/**/
+/*.slide
+{
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+}
+.slide:first-child
+{
+    left: 0;
+}
+.overlay-content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+.play-button
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 4em;
+    height: 3em;
+    margin-top: -1.5em;
+    margin-left: -2em;
+
+    cursor: pointer;
+
+    border-radius: 1em;
+    background: transparent;
+}
+.play-button:after
+{
+    position: relative;
+    top: 14px;
+    left: 3px;
+
+    display: inline-block;
+
+    content: '';
+
+    border-width: 10px 0 10px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+video
+{
+    max-width: 100%;
+    max-height: 100%;
+}*/
+
+/**/
+
+/*.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+*/
